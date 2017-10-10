@@ -5,7 +5,7 @@ A Vue component to validate
 
 ## demo演示
 
-[demo](http://mall.yucccc.com/vuepayboard/)
+[demo](https://gaohawk.github.io/my-validate/mainPage.html#/home)
 
 ## 安装
 
