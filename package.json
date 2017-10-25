@@ -1,7 +1,7 @@
 {
-    "name": "vue-validate",
+    "name": "easy-plugin",
     "description": "A Vue.js project",
-    "version": "1.0.0",
+    "version": "0.0.0",
     "author": "GaoHawk <897622361@qq.com>",
     "private": false,
     "license": "MIT",
@@ -32,5 +32,16 @@
         "vue-template-compiler": "^2.4.4",
         "webpack": "^3.6.0",
         "webpack-dev-server": "^2.9.1"
-    }
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/GaoHawk/my-validate.git"
+    },
+    "keywords": [
+        "87832311"
+    ],
+    "bugs": {
+        "url": "https://github.com/GaoHawk/my-validate/issues"
+    },
+    "homepage": "https://github.com/GaoHawk/my-validate#readme"
 }

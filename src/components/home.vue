@@ -28,10 +28,8 @@ import { mapState } from 'vuex'
 import { Indicator } from 'mint-ui';
 import { Toast , MessageBox} from 'mint-ui';
 export default {
-
      name:'home',
      computed:{
-
      },
      data(){
         return {
@@ -43,13 +41,6 @@ export default {
         }
      },
      methods:{
-
-
-
-
-
-
-
       //  下一步车辆信息
        next:function(){
          this.$store.commit('SET_CITY_ON',false);
@@ -95,137 +86,7 @@ export default {
   }
 </script>
 <style>
-  .secondInputStyle{
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    border-radius: 0;
-    border: 0;
-    -webkit-box-flex: 1;
-    -ms-flex: 1;
-    flex: 1;
-    outline: 0;
-    line-height: 1.6;
-    font-size: inherit;
-    border:0px;
-    width:45px;
-    position:absolute;
-    right:7.8rem;
-    bottom:-14px;
-    font-size:1rem;
-    outline:beige;
-  }
-  .custom-inputStyle{
-    border-radius:0.5rem;
-    margin-bottom:1rem;
-    border:0.08rem solid #e5e5e5;
-  }
-  #picker{
-    margin-top: 7rem;
-  }
-  #cpicker{
-    margin-top: 5.5rem;
-  }
-  .checkbox{
-    position: fixed;
-    right:1rem;
-    top: 3.5rem;
-    font-size:1rem;
-    color:#666;
-    line-height: 4rem;
-    padding-left: 0;
-  }
-  .reCheck::after{
-    content: "";
-    display: block;
-    width:1.6rem;
-    height:1.6rem;
-    border-radius:0.5rem;
-    border:0.1rem solid #17c3e5;
-    background:none;
-  }
-  .reCheck.checked::before{
-    content:'';
-    display: block;
-    position:absolute;
-    width: 1.5rem;
-    height:1.5rem;
-    background: url(../assets/checked.png) no-repeat;
-    background-size: cover;
-  }
-  .carNumber{
-    width: 80%;
-  }
-  @media screen and (max-width:375px){
-      .custom-inputStyle{
-        margin-bottom: 0.7rem;
-      }
-      #picker{
-        margin-top: 5.9rem;
-      }
-      #cpicker{
-        margin-top: 4.4rem;
-      }
-   }
-  @media screen and (max-width:360px){
-      .custom-inputStyle{
-        margin-bottom: 0.4rem;
-        min-height: 44px;
-      }
-      #picker{
-        margin-top: 5.2rem;
-      }
-      #cpicker{
-        margin-top: 4rem;
-      }
-  }
-  @media screen and (max-width:320px){
-      .custom-inputStyle{
-        margin-bottom: 0.4rem;
-        min-height: 36px;
-      }
-      .checkbox{
-        top:3.1rem;
-        right:0.7rem;
-      }
-      .reCheck::after{
-        width:1.35rem;
-        height:1.35rem;
-      }
-      .reCheck.checked::before{
-        width:1.15rem;
-        height: 1.15rem;
-      }
-      .carNumber{
-        width: 79%;
-      }
-      .secondInputStyle{
-        right:7.3rem;
-        bottom: -14px;
-      }
-      #picker{
-        margin-top: 4.25rem;
-      }
-      #cpicker{
-        margin-top: 2.45rem;
-      }
-  }
-  #homeindex{
-    margin-top: 4rem;
-  }
-  .mint-cell-wrapper .mint-cell-value input{
-    text-align: right;
-  }
 
-
-  .check .reCheck{
-    margin-right:0.5rem;
-  }
-  .reCheck{
-    display: inline-block;
-    position:relative;
-    vertical-align:middle;
-  }
 
 </style>
 

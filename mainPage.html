@@ -2,20 +2,78 @@
 <html>
 
 <head>
-    <meta charset=utf-8>
+    <meta charset="utf-8">
     <title>log_yun</title>
-    <meta name=viewport content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1,minimum-scale=1">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel=stylesheet>
-    <link href=https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css rel=stylesheet>
-    <link rel=stylesheet href=https://unpkg.com/mint-ui/lib/style.css>
-    <link href=./static/css/app.479b24bfecb6b9b7c5220ae17736ec2a.css rel=stylesheet>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/mint-ui/lib/style.css">
+    <!-- 引入样式 -->
+    <link rel="stylesheet" href="https://unpkg.com/mint-ui/lib/style.css">
+
 </head>
 
 <body>
-    <div id=app></div>
-    <script type=text/javascript src=./static/js/manifest.9f33801b53db3ea875f8.js></script>
-    <script type=text/javascript src=./static/js/vendor.7c41f883697737633048.js></script>
-    <script type=text/javascript src=./static/js/app.6295f31154b458e5b8de.js></script>
+    <div id="app">
+        <button @click="doubleNum">click me</button> <span>{{num}}</span>
+
+        <mt-cell title="起始日期">{{ '2017-9' | formatTime}}</mt-cell>
+        <mt-field label="车主姓名" v-uname="username" placeholder="请输入姓名" class="custom-inputStyle" v-model="username" :attr="{ maxLength:20 }"></mt-field>
+        <mt-field label="联系手机" placeholder="请输入手机号" type="tel" v-uname.checkphone.checkEmail="phone" class="custom-inputStyle" v-model="phone" :attr="{ maxLength:11 }">
+        </mt-field>
+        <div class="button" style="text-align:center">
+            <mt-button size="normal" type="primary" style="width:60%;" @click="next()">下一步</mt-button>
+        </div>
+        <!-- built files will be auto injected -->
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <!-- <script src="./dist/vue-pay-keyboard.js"></script> -->
+    <script src="./dist/myvue-validate.js"></script>
+    <!-- 引入组件库 -->
+    <script src="https://unpkg.com/mint-ui/lib/index.js"></script>
 </body>
+<script>
+    new Vue({
+        el: '#app',
+        data() {
+            return {
+                isPay: false,
+                num: 1,
+                newDate: new Date(),
+                carNumber: '',
+                readonly: false,
+                username: '',
+                phone: '',
+            }
+        },
+        methods: {
+            doubleNum() {
+                this.num = this.doubleNumber(this.num);
+                console.log(this.num);
+            },
+            next() {
+                if (!this.checkStart) {
+                    alert('请填写相关信息')
+                } else {
+                    console.log(this.errMsgMap);
+                    if (this.errMsgMap.size > 0) {
+                        let MapArr = [...this.errMsgMap];
+                        console.log(MapArr)
+                            // Toast({
+                            //     message: MapArr[0][1],
+                            //     position: 'bottom',
+                            //     duration: 5000
+                            // });
+                        alert(MapArr[0][1])
+                    } else {
+                        alert('验证成功');
+                    }
+                }
+            }
+        }
+    })
+</script>
 
 </html>
