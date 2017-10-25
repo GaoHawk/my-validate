@@ -5,7 +5,7 @@ A Vue component to validate
 
 ## demo演示
 
-[demo](https://gaohawk.github.io/my-validate/mainPage.html)
+[demo](https://gaohawk.github.io/my-validate/)
 
 ## 安装
 
