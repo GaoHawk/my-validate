@@ -24,7 +24,7 @@ var validate = require('myvue-validate')
 Vue.use(myvue-validate)
 
 // 或者直接使用script导入
-<script src="./node_modules/vue/dist/myvue-validate.js"></script>
+<script src="./node_modules/easy-plugin/static/js/myvue-validate.js"></script>
 
 ```
 
