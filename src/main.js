@@ -10,7 +10,7 @@ Vue.use(validate);
 Vue.use(Router)
 Vue.use(VueAxios, axios)
 Vue.use(MintUi)
-console.log(1);
+console.log(2);
 
 new Vue({
     el: '#app',
